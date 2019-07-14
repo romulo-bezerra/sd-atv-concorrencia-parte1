@@ -17,21 +17,20 @@ public class Loader {
     private final ArrayBlockingQueue<String> queueInsert;
     private final ArrayBlockingQueue<String> queueUpdate;
     private final ArrayBlockingQueue<String> queueDelete;
+    private UserIdFactory userIdFactory;
 
-    public Loader() {
-        queueInsert = new ArrayBlockingQueue<String>(20);
-        queueUpdate = new ArrayBlockingQueue<String>(20);
-        queueDelete = new ArrayBlockingQueue<String>(20);
+    public Loader() throws UnknownHostException {
+        this.queueInsert = new ArrayBlockingQueue<String>(20);
+        this.queueUpdate = new ArrayBlockingQueue<String>(20);
+        this.queueDelete = new ArrayBlockingQueue<String>(20);
+        this.userIdFactory = new UserIdFactory();
     }
 
     public static void main(String[] args) throws SQLException, UnknownHostException {
         new Loader().run();
     }
 
-    public void run() throws UnknownHostException {
-
-        UserIdFactory userIdFactory = new UserIdFactory();
-
+    public void run() {
         for (int i=1; i<=20; i++){
             try {
                 Usuario usuario = new Usuario();
