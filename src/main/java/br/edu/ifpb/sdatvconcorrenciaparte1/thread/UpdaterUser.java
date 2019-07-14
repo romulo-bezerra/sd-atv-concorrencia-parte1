@@ -9,10 +9,10 @@ public class UpdaterUser implements Runnable {
 
     private final Logger log = Logger.getLogger(this.getClass().getName());
     private UsuarioDao usuarioDao;
-    private ArrayBlockingQueue<Integer> queueUpdate;
-    private ArrayBlockingQueue<Integer> queueDelete;
+    private ArrayBlockingQueue<String> queueUpdate;
+    private ArrayBlockingQueue<String> queueDelete;
 
-    public UpdaterUser(ArrayBlockingQueue<Integer> queueUpdate, ArrayBlockingQueue<Integer> queueDelete) {
+    public UpdaterUser(ArrayBlockingQueue<String> queueUpdate, ArrayBlockingQueue<String> queueDelete) {
         this.queueUpdate = queueUpdate;
         this.queueDelete = queueDelete;
         this.usuarioDao = new UsuarioDao();
@@ -26,7 +26,7 @@ public class UpdaterUser implements Runnable {
 
     private void updateUser() {
         try {
-            int userIdUpdateLiberado = queueUpdate.take();
+            String userIdUpdateLiberado = queueUpdate.take();
             usuarioDao.update(userIdUpdateLiberado);
             queueDelete.put(userIdUpdateLiberado);
             log.info("Usuário atualizado");

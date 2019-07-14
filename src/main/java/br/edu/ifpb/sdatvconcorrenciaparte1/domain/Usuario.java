@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Usuario {
 
-    private int id;
+    private String id;
     private String nome;
     private Boolean atualizando;
     private Boolean deletando;
@@ -17,11 +17,11 @@ public class Usuario {
         this.deletando = deletando;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) { this.id = id; }
+    public void setId(String id) { this.id = id; }
 
     public String getNome() {
         return nome;

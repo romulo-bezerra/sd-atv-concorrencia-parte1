@@ -9,9 +9,9 @@ public class RemoverUser implements Runnable {
 
     private final Logger log = Logger.getLogger(this.getClass().getName());
     private UsuarioDao usuarioDao;
-    private ArrayBlockingQueue<Integer> queueDelete;
+    private ArrayBlockingQueue<String> queueDelete;
 
-    public RemoverUser(ArrayBlockingQueue<Integer> queueDelete) {
+    public RemoverUser(ArrayBlockingQueue<String> queueDelete) {
         this.queueDelete = queueDelete;
         this.usuarioDao = new UsuarioDao();
         new Thread(this, "RemoverUser").start();
@@ -24,7 +24,7 @@ public class RemoverUser implements Runnable {
 
     private void deleteUser() {
         try {
-            int userIdDeleteLiberado = queueDelete.take();
+            String userIdDeleteLiberado = queueDelete.take();
             usuarioDao.delete(userIdDeleteLiberado);
             log.info("Usuário deletado");
         } catch (InterruptedException e) {

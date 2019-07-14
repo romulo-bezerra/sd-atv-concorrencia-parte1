@@ -1,4 +1,4 @@
-package br.edu.ifpb.sdatvconcorrenciaparte1.confactory;
+package br.edu.ifpb.sdatvconcorrenciaparte1.factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
