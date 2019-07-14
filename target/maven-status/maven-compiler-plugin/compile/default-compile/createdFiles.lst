@@ -1,0 +1,8 @@
+br/edu/ifpb/sdatvconcorrenciaparte1/dao/UsuarioDao.class
+br/edu/ifpb/sdatvconcorrenciaparte1/thread/UpdaterUser.class
+br/edu/ifpb/sdatvconcorrenciaparte1/domain/Usuario.class
+br/edu/ifpb/sdatvconcorrenciaparte1/factory/UserIdFactory.class
+br/edu/ifpb/sdatvconcorrenciaparte1/thread/RemoverUser.class
+br/edu/ifpb/sdatvconcorrenciaparte1/thread/InserterUser.class
+br/edu/ifpb/sdatvconcorrenciaparte1/factory/ConFactoryPostgreSQL.class
+br/edu/ifpb/sdatvconcorrenciaparte1/loader/Loader.class

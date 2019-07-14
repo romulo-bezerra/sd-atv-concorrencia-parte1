@@ -1,0 +1,8 @@
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/domain/Usuario.java
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/loader/Loader.java
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/thread/RemoverUser.java
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/thread/UpdaterUser.java
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/factory/ConFactoryPostgreSQL.java
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/thread/InserterUser.java
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/factory/UserIdFactory.java
+/home/romulo/Área de Trabalho/workspace-p6/SD/sd-atv-concorrencia-parte1/src/main/java/br/edu/ifpb/sdatvconcorrenciaparte1/dao/UsuarioDao.java
