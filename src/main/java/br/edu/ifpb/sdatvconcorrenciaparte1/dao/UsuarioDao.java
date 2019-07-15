@@ -15,7 +15,7 @@ public class UsuarioDao {
     public void insert(Usuario usuario){
         try {
             Connection con = ConFactoryPostgreSQL.getConnectionPostgres();
-            String sql = "INSERT INTO usuario (id, nome, atualizando, deletando) VALUES (?,?,?,?)";
+            String sql = "INSERT INTO Usuario (id, nome, atualizando, deletando) VALUES (?,?,?,?)";
             PreparedStatement statement = null;
             statement = con.prepareStatement(sql);
             statement.setString(1, usuario.getId());
@@ -34,7 +34,7 @@ public class UsuarioDao {
     public void update(String userId){
         try {
             Connection con = ConFactoryPostgreSQL.getConnectionPostgres();
-            String sql = "UPDATE usuario SET atualizando=? WHERE id=?";
+            String sql = "UPDATE Usuario SET atualizando=? WHERE id=?";
             PreparedStatement statement = con.prepareStatement(sql);
             statement.setBoolean(1, true);
             statement.setString(2, userId);
@@ -50,7 +50,7 @@ public class UsuarioDao {
     public void delete(String id){
         try {
             Connection con = ConFactoryPostgreSQL.getConnectionPostgres();
-            String sql = "UPDATE usuario SET deletando=? WHERE id=?";
+            String sql = "UPDATE Usuario SET deletando=? WHERE id=?";
             PreparedStatement statement = null;
             statement = con.prepareStatement(sql);
             statement.setBoolean(1,true);
